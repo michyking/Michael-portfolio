@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+.btn {
+  background: linear-gradient(
+    92.23deg,
+    rgb(251, 37, 118) 21.43%,
+    /* rgb(51, 47, 208) 50.63%, */ rgb(0, 2, 161) 100%,
+    rgba(255, 86, 246, 0.51) 117.04%
+  );
+  box-shadow: 0px 4.42184px 107.23px rgba(251, 37, 118, 0.4);
+}
+
+.btn:hover {
+  background: linear-gradient(
+    92.23deg,
+    rgba(255, 86, 246, 0.51) 21.43%,
+    rgb(0, 2, 161) 100%,
+    /* rgb(51, 47, 208) 100%, */ rgb(251, 37, 118) 117.04%
+  );
+}
+
+@layer base {
+  body {
+    @apply font-secondary text-[1.1rem] leading-8 text-white;
+  }
+  .h2 {
+    @apply font-primary text-[30px] md:text-[42px] mb-6 tracking-[10%] uppercase;
+  }
+  .h3 {
+    @apply font-primary text-[26px] mb-6 leading-[46px];
+  }
+  .btn {
+    @apply rounded-full font-tertiary text-white font-medium;
+  }
+  .btn-sm {
+    @apply h-[48px] px-6 text-sm;
+  }
+  .btn-sm1 {
+    @apply h-[48px] px-6 text-sm border rounded-full;
+  }
+  .btn-lg {
+    @apply h-[56px] px-10 text-base;
+  }
+  .btn-link {
+    @apply text-base;
+  }
+  .form {
+    @apply bg-transparent border border-primary outline-none rounded-md w-[300px] lg:w-[500px] px-4 py-3;
+  }
+}
+
+/* THE NAV STYLE */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  padding: 2rem 3rem;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  /* margin-bottom: 200px; */
+}
+
+header .nav-btn {
+  color: var(--White);
+  font-size: 1.5rem;
+  background: transparent;
+  outline: none;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* HERO SECTION */
+.hero-section{
+  margin-top: 90px;
+}
+
+@media only screen and (max-width: 768px) {
+  header .nav-btn {
+    display: inline;
+  }
+
+  header .mobile {
+    position: fixed;
+    top: 130px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: black;
+    padding: 1rem;
+    border-radius: 40px 0 40px 0;
+    gap: 1.5rem;
+    transition: all 0.5s;
+    transform: translateX(100vw);
+
+  }
+
+  header .responsive_nav {
+    transform: translateX(0);
+  }
+
+  /* HERO SECTION */
+  .hero-section{
+    margin-top: 130px;
+  }
+}
+
+/* Hero and About section */
+
+
+.skill-box{
+  border-radius: 10px;
+  box-shadow: 1px 0.5px 3px rgb(119, 118, 118);
+  transition: all .5s;
+}
+
+.skill-box:hover{
+  transform: scale(1.05);
+}
+
+.html{
+  color: rgb(219, 83, 4);
+}
+
+.css{
+  color: rgb(9, 9, 224);
+}
+
+.js{
+  color: yellow;
+}
+
+.react{
+  color: aqua;
+}
+
+.redux{
+  color: purple;
+}
+
+.tailwind{
+  color: rgb(0, 132, 255);
+}
+
+.chakra {
+  color: aqua;
+}
+.git{
+  color: rgb(190, 26, 4);
+}
